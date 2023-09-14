@@ -7,6 +7,12 @@ public class Topping {
 
 
     private String nombre; // Nombre del topping
+    private double precio; // Precio del topping
+
+    public double getPrecio() {
+        return precio;
+    }
+
     private ArrayList<String> ingredientes = new ArrayList<>(); // Ingredientes del topping
 
     public void agregarIngrediente(String ingrediente) {
@@ -19,10 +25,13 @@ public class Topping {
 
     @Override
     public String toString() {
-        return "Topping{" + "nombre='" + nombre + '\'' + ", ingredientes=" + ingredientes + '}';
+        return nombre + " " + precio;
     }
 
-
+    public  Topping (String nombre, double precio){
+        this.nombre=nombre;
+        this.precio=precio;
+    }
     //getters y setters
     public String getNombre() {
         return nombre;

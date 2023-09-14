@@ -10,7 +10,6 @@ Crear la clase pizza con los siguientes atributos:
  */
 public class Pizza {
     private String name;
-    private double price;
     private List<Topping> toppings = new ArrayList<>();
 
 //    los tres puntos (...) en el parámetro Topping... toppings del constructor de la clase Pizza tienen
@@ -20,9 +19,8 @@ public class Pizza {
 //    espera una lista de objetos Topping, pero en lugar de especificar explícitamente la lista de
 //    objetos, se utiliza el operador de dispersión para pasar todos los argumentos restantes como una
 //    lista de objetos Topping.
-    public Pizza(String name, double price, Topping... toppings) {
+    public Pizza(String name, Topping... toppings) {
         this.name = name;
-        this.price = price;
         for (Topping topping : toppings) {
             this.toppings.add(topping);
         }
@@ -45,20 +43,17 @@ public class Pizza {
         return name;
     }
 
-    public double getPrice() {
-        return price;
-    }
 
     @Override
     public String toString() {
-        return "Pizza{" + "name='" + name + '\'' + ", price=" + price + ", toppings=" + toppings + '}';
+        return "Pizza{" + "name='" + name + '\'' + ", toppings=" + toppings + '}';
     }
 
     public void prepare() {
         System.out.println("Preparing..... " + name);
         System.out.println("Adding toppings:");
         for (Topping topping : toppings) {
-            System.out.println("- " + topping.getNombre());
+            System.out.println("- " + topping.getNombre() + " Q" + topping.getPrecio());
             //put 1 second delay
             try {
                 Thread.sleep(1000);
