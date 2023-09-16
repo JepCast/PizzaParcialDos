@@ -19,8 +19,11 @@ public class Pizza {
 //    espera una lista de objetos Topping, pero en lugar de especificar explícitamente la lista de
 //    objetos, se utiliza el operador de dispersión para pasar todos los argumentos restantes como una
 //    lista de objetos Topping.
+
+
     public Pizza(String name, Topping... toppings) {
         this.name = name;
+
         for (Topping topping : toppings) {
             this.toppings.add(topping);
         }
@@ -43,24 +46,23 @@ public class Pizza {
         return name;
     }
 
-
     @Override
     public String toString() {
         return "Pizza{" + "name='" + name + '\'' + ", toppings=" + toppings + '}';
     }
 
-    public void prepare() {
-        System.out.println("Preparing..... " + name);
-        System.out.println("Adding toppings:");
-        for (Topping topping : toppings) {
-            System.out.println("- " + topping.getNombre() + " Q" + topping.getPrecio());
-            //put 1 second delay
-            try {
-                Thread.sleep(1000);
-            } catch (InterruptedException e) {
-                e.printStackTrace();
-            }
-        }
-        System.out.println("The Pizza is ready!");
-    }
+//    public void prepare() {
+//        System.out.println("Preparando..... " + name);
+//        System.out.println("Adding toppings:");
+//        for (Topping topping : toppings) {
+//            System.out.println("- " + topping.getNombre() + " Q" + topping.getPrecio());
+//            //put 1 second delay
+//            try {
+//                Thread.sleep(1000);
+//            } catch (InterruptedException e) {
+//                e.printStackTrace();
+//            }
+//        }
+//        System.out.println("La pizza esta lista!");
+//    }
 }
