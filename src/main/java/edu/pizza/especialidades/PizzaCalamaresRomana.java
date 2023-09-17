@@ -11,7 +11,7 @@ public class PizzaCalamaresRomana extends Pizza {
 
     }
 
-    private void IngredientesPizzaCalamaresRomana() {
+    public void IngredientesPizzaCalamaresRomana() {
         addTopping(new Topping("Anillos de calamar fritos", 5));
         addTopping(new Topping("Salsa marinara",8));
         addTopping(new Topping("Queso parmesano rallado",5));

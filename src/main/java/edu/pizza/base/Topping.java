@@ -3,35 +3,30 @@ package edu.pizza.base;
 import java.util.ArrayList;
 
 public class Topping {
-
-
-
     private String nombre; // Nombre del topping
-    private double precio; // Precio del topping
-
-    public double getPrecio() {
-        return precio;
-    }
-
+    private double precio;
     private ArrayList<String> ingredientes = new ArrayList<>(); // Ingredientes del topping
 
     public void agregarIngrediente(String ingrediente) {
         this.ingredientes.add(ingrediente);
     }
 
-    public Topping(String nombre) {
+    public double getPrecio() {
+        return precio;
+    }
+
+    public Topping(String nombre, double precio) {
+
         this.nombre = nombre;
+        this.precio=precio;
     }
 
     @Override
     public String toString() {
-        return nombre + " " + precio;
+        return  nombre +"Q" + precio ;
     }
 
-    public  Topping (String nombre, double precio){
-        this.nombre=nombre;
-        this.precio=precio;
-    }
+
     //getters y setters
     public String getNombre() {
         return nombre;

@@ -51,18 +51,18 @@ public class Pizza {
         return "Pizza{" + "name='" + name + '\'' + ", toppings=" + toppings + '}';
     }
 
-//    public void prepare() {
-//        System.out.println("Preparando..... " + name);
-//        System.out.println("Adding toppings:");
-//        for (Topping topping : toppings) {
-//            System.out.println("- " + topping.getNombre() + " Q" + topping.getPrecio());
-//            //put 1 second delay
-//            try {
-//                Thread.sleep(1000);
-//            } catch (InterruptedException e) {
-//                e.printStackTrace();
-//            }
-//        }
-//        System.out.println("La pizza esta lista!");
-//    }
+    public void prepare() {
+        System.out.println("Preparando..... " + name);
+        System.out.println("Adding toppings:");
+        for (Topping topping : toppings) {
+            System.out.println("- " + topping.getNombre() + " Q" + topping.getPrecio());
+            //put 1 second delay
+            try {
+                Thread.sleep(1000);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+        }
+        System.out.println("La pizza esta lista!");
+    }
 }
